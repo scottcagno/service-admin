@@ -1,0 +1,17 @@
+# REFRESHER:
+# $0 = name of function or program
+# $# = number of parameters passed to the function or program
+# $* and $@ hold all parameters passed to the function
+# Note: When double quoted "$*" expands to a single string separated by space (ie. $1 $2 $n)
+# Note: When double quoted "$@" expands to separate strings (ie. "$1" "$2" "$n")
+# Note: When not double quoted, $* and $@ are the same
+
+function greeting() {
+  echo "Hello $1"
+}
+
+greeting "Joe"
+
+function add() {
+    return $1+$2
+}
